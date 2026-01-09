@@ -1,0 +1,530 @@
+[
+    {
+        "title": "Nhập môn Data Science",
+        "slug": "nhap-mon-data-science",
+        "description": "Khóa học nhập môn về Khoa học dữ liệu, giúp bạn hiểu các khái niệm cơ bản và quy trình làm việc của một Data Scientist.",
+        "price": 0,
+        "is_published": true,
+        "author_name": "Dr. Sarah Data",
+        "rating": 4.5,
+        "rating_count": 120,
+        "level": "Beginner",
+        "sections": [
+            {
+                "title": "Giới thiệu về Data Science",
+                "order": 1,
+                "lessons": [
+                    {
+                        "title": "Data Science là gì?",
+                        "slug": "data-science-la-gi",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 600,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Data Science (Khoa học dữ liệu) là lĩnh vực nghiên cứu về việc trích xuất thông tin, kiến thức từ dữ liệu.",
+                                "order": 1
+                            },
+                            {
+                                "type": "image",
+                                "content": "https://dummyimage.com/600x400/000/fff&text=Data+Science+Overview",
+                                "order": 2
+                            },
+                            {
+                                "type": "text",
+                                "content": "Nó kết hợp toán học, thống kê và khoa học máy tính để phân tích dữ liệu lớn.",
+                                "order": 3
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Vai trò của Data Scientist",
+                        "slug": "vai-tro-cua-data-scientist",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 900,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Một Data Scientist cần có kỹ năng về lập trình, thống kê và kiến thức chuyên ngành.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "console.log('Data Scientist = Math + Code + Business');",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Công cụ cho Data Science",
+                "order": 2,
+                "lessons": [
+                    {
+                        "title": "Giới thiệu Jupyter Notebook",
+                        "slug": "gioi-thieu-jupyter-notebook",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1200,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Jupyter Notebook là công cụ không thể thiếu cho các dự án phân tích dữ liệu.",
+                                "order": 1
+                            },
+                            {
+                                "type": "image",
+                                "content": "https://dummyimage.com/600x400/000/fff&text=Jupyter+Notebook",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cài đặt môi trường Python",
+                        "slug": "cai-dat-moi-truong-python",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1500,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Hướng dẫn cài đặt Anaconda và các thư viện cần thiết.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "# Cài đặt thư viện pandas\n!pip install pandas",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Cơ bản về Machine Learning",
+        "slug": "co-ban-ve-machine-learning",
+        "description": "Tìm hiểu các thuật toán cốt lõi của Machine Learning và cách áp dụng chúng vào thực tế.",
+        "price": 500000,
+        "is_published": true,
+        "author_name": "Andrew Ng Fan",
+        "rating": 4.9,
+        "rating_count": 850,
+        "level": "Intermediate",
+        "sections": [
+            {
+                "title": "Tổng quan Machine Learning",
+                "order": 1,
+                "lessons": [
+                    {
+                        "title": "Machine Learning vs Traditional Programming",
+                        "slug": "ml-vs-traditional-programming",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 800,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Sự khác biệt cơ bản nằm ở cách hệ thống học từ dữ liệu thay vì được lập trình quy tắc cụ thể.",
+                                "order": 1
+                            },
+                            {
+                                "type": "image",
+                                "content": "https://dummyimage.com/600x400/000/fff&text=ML+vs+Traditional",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Các loại Machine Learning",
+                        "slug": "cac-loai-machine-learning",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1000,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Ba loại chính: Supervised Learning, Unsupervised Learning và Reinforcement Learning.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "const types = ['Supervised', 'Unsupervised', 'Reinforcement'];\nconsole.log(types);",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Supervised Learning",
+                "order": 2,
+                "lessons": [
+                    {
+                        "title": "Linear Regression",
+                        "slug": "linear-regression",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 2000,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Hồi quy tuyến tính là thuật toán cơ bản nhất để dự đoán giá trị số.",
+                                "order": 1
+                            },
+                            {
+                                "type": "image",
+                                "content": "https://dummyimage.com/600x400/000/fff&text=Linear+Regression",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Logistic Regression",
+                        "slug": "logistic-regression",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1800,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Dùng cho bài toán phân loại nhị phân (0 hoặc 1).",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "from sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression()",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Python cho Phân tích Dữ liệu",
+        "slug": "python-cho-phan-tich-du-lieu",
+        "description": "Làm chủ ngôn ngữ Python và các thư viện mạnh mẽ như Pandas, NumPy, Matplotlib.",
+        "price": 300000,
+        "is_published": true,
+        "author_name": "PyMaster",
+        "rating": 4.2,
+        "rating_count": 45,
+        "level": "Beginner",
+        "sections": [
+            {
+                "title": "Cơ bản về NumPy",
+                "order": 1,
+                "lessons": [
+                    {
+                        "title": "NumPy Array",
+                        "slug": "numpy-array",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1200,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "NumPy Array nhanh hơn và hiệu quả hơn Python List thông thường.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "import numpy as np\narr = np.array([1, 2, 3])",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Các phép toán trên Matrix",
+                        "slug": "cac-phep-toan-tren-matrix",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1500,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Thực hiện nhân ma trận, tìm định thức và nghịch đảo.",
+                                "order": 1
+                            },
+                            {
+                                "type": "image",
+                                "content": "https://dummyimage.com/600x400/000/fff&text=Matrix+Operations",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Làm việc với Pandas",
+                "order": 2,
+                "lessons": [
+                    {
+                        "title": "DataFrame và Series",
+                        "slug": "dataframe-va-series",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1800,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "DataFrame là cấu trúc dữ liệu bảng 2 chiều, Series là mảng 1 chiều.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "import pandas as pd\ndf = pd.DataFrame({'col1': [1, 2], 'col2': [3, 4]})",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Đọc và ghi file CSV",
+                        "slug": "doc-va-ghi-file-csv",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1000,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Pandas hỗ trợ đọc ghi nhiều định dạng file như CSV, Excel, JSON.",
+                                "order": 1
+                            },
+                            {
+                                "type": "code",
+                                "content": "df = pd.read_csv('data.csv')\ndf.to_csv('new_data.csv', index=False)",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Làm chủ Số Phức từ A-Z",
+        "slug": "lam-chu-so-phuc-tu-a-z",
+        "description": "Khóa học chuyên sâu về Số phức, bao gồm dạng đại số, lượng giác, dạng mũ Euler và các phép toán nâng cao, ứng dụng trong Data Science và AI.",
+        "author_name": "Math Genius",
+        "rating": 5.0,
+        "rating_count": 200,
+        "level": "Advanced",
+        "price": 0,
+        "is_published": true,
+        "sections": [
+            {
+                "title": "Phần 1: Khái niệm cơ bản và Dạng đại số",
+                "order": 1,
+                "lessons": [
+                    {
+                        "title": "Định nghĩa và Số phức liên hợp",
+                        "slug": "dinh-nghia-va-so-phuc-lien-hop",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 900,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### 1. Định nghĩa\n\nChúng ta bắt đầu với đơn vị ảo **i**, được định nghĩa là số thỏa mãn:\n> **i² = -1**\n\nMột số phức **z** được biểu diễn dưới dạng đại số như sau:\n**z = a + bi**\n* **a**: Phần thực (Real part)\n* **b**: Phần ảo (Imaginary part)\n\nĐặc biệt: Nếu a=0, z được gọi là số thuần ảo.",
+                                "order": 1
+                            },
+                            {
+                                "type": "text",
+                                "content": "### 2. Số phức liên hợp (Complex Conjugate)\n\nVới **z = a + bi**, số phức liên hợp là:\n**z̅ = a - bi**\n\nQuy tắc: Giữ nguyên phần thực, đổi dấu phần ảo.\nGóc nhìn hình học: Trong mặt phẳng phức, số phức liên hợp là ảnh phản chiếu của số phức ban đầu qua trục thực (trục hoành).",
+                                "order": 2
+                            },
+                            {
+                                "type": "note",
+                                "content": "{\"style\": \"info\", \"title\": \"Tính chất quan trọng\", \"text\": \"1) z + z̅ ∈ R (Tổng là số thực)\\n2) z . z̅ ∈ R (Tích là số thực)\\n3) Liên hợp của tích bằng tích các liên hợp.\"}",
+                                "order": 3
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Các phép toán cơ bản",
+                        "slug": "cac-phep-toan-co-ban",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1200,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### a. Cộng và Trừ\n\nThực hiện cộng hoặc trừ riêng phần thực và phần ảo tương ứng.\n** (a+bi) ± (c+di) = (a±c) + (b±d)i **",
+                                "order": 1
+                            },
+                            {
+                                "type": "text",
+                                "content": "### b. Nhân\n\nNhân phân phối và rút gọn (nhớ i² = -1):\n** (a+bi)(c+di) = (ac - bd) + (ad + bc)i **\n\nMẹo nhớ: \"Thực thực, ảo ảo nhân. Nhân chéo trừ nhau\".",
+                                "order": 2
+                            },
+                            {
+                                "type": "text",
+                                "content": "### c. Chia\n\nNguyên tắc: Nhân cả tử và mẫu cho liên hợp của mẫu để khử i ở mẫu số.",
+                                "order": 3
+                            },
+                            {
+                                "type": "code",
+                                "content": "Ví dụ: Tính w = (3+2i) / (1-i)\n\nNhân cả tử và mẫu với (1+i):\nw = (3+2i)(1+i) / (1-i)(1+i)\nMẫu số = 1² + (-1)² = 2\nTử số = 3 + 3i + 2i + 2i² = 3 + 5i - 2 = 1 + 5i\n\nKết quả: w = 0.5 + 2.5i",
+                                "order": 4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Phần 2: Dạng Lượng Giác & Hình Học",
+                "order": 2,
+                "lessons": [
+                    {
+                        "title": "Mô-đun và Argument",
+                        "slug": "mo-dun-va-argument",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1200,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### 1. Mô-đun (Modulus)\n\nĐịnh nghĩa: Là khoảng cách từ gốc tọa độ O đến điểm biểu diễn z.\nCông thức: **|z| = r = √(a² + b²)**\n\nLưu ý: Không thể so sánh 'lớn hơn' hay 'nhỏ hơn' giữa hai số phức. Ta chỉ so sánh mô-đun của chúng.",
+                                "order": 1
+                            },
+                            {
+                                "type": "text",
+                                "content": "### 2. Argument (Góc pha)\n\nLà góc φ tạo bởi tia Oz và trục thực Ox.\nCông thức:\n* cos φ = a/r\n* sin φ = b/r\n* tan φ = b/a",
+                                "order": 2
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Dạng Lượng giác và Dạng Mũ",
+                        "slug": "dang-luong-giac-va-dang-mu",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1200,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### 3. Dạng lượng giác (Polar Form)\n\nTừ a = r.cosφ và b = r.sinφ, ta có:\n** z = r(cosφ + i.sinφ) **",
+                                "order": 1
+                            },
+                            {
+                                "type": "text",
+                                "content": "### 4. Dạng mũ (Euler Form)\n\nCông thức Euler giúp viết gọn và dễ tính toán:\n** e^(iα) = cosα + i.sinα **\n\nSuy ra dạng mũ của số phức:\n** z = r . e^(iφ) **\n\nDạng này cực kỳ quan trọng trong AI và Xử lý tín hiệu.",
+                                "order": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Phần 3: Phép toán trên dạng lượng giác",
+                "order": 3,
+                "lessons": [
+                    {
+                        "title": "Nhân, Chia và Lũy thừa",
+                        "slug": "nhan-chia-va-luy-thua",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1500,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### 1. Nhân và Chia\n\nKhi dùng dạng mũ/lượng giác:\n* Phép nhân: Mô-đun nhân nhau, Argument cộng lại.\n* Phép chia: Mô-đun chia nhau, Argument trừ ra.",
+                                "order": 1
+                            },
+                            {
+                                "type": "text",
+                                "content": "### 2. Công thức De Moivre\n\nQuy tắc: \"Mô-đun thì mũ lên, còn Góc thì nhân vào.\"\n** z^n = r^n (cos(nφ) + i.sin(nφ)) = r^n . e^(inφ) **",
+                                "order": 2
+                            },
+                            {
+                                "type": "code",
+                                "content": "Ví dụ: Tính z^10 biết z = 1 + i\n\nr = √2\nφ = π/4\n\nz^10 = (√2)^10 . e^(i * 10 * π/4)\n     = 32 . e^(i * 5π/2)\n     = 32 . e^(i * π/2)   (vì 5π/2 = 2π + π/2)\n     = 32i",
+                                "order": 3
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Căn bậc n",
+                        "slug": "can-bac-n",
+                        "type": "text",
+                        "order": 2,
+                        "duration": 1000,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "Căn bậc n của z có đúng n giá trị phân biệt. Các nghiệm này tạo thành một đa giác đều n cạnh nội tiếp đường tròn.\n\nCông thức giúp tìm tất cả các nghiệm bằng cách cộng thêm k2π vào góc trước khi chia n.",
+                                "order": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Phần 4: Ứng dụng trong Data Science & AI",
+                "order": 4,
+                "lessons": [
+                    {
+                        "title": "Ứng dụng thực tế",
+                        "slug": "ung-dung-thuc-te",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 1800,
+                        "is_free": false,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### 1. Xử lý tín hiệu & FFT\nDạng mũ **z = re^(iφ)** là trái tim của biến đổi Fourier (FFT). FFT dùng để chuyển dữ liệu từ miền thời gian sang miền tần số (ví dụ: khử nhiễu âm thanh, nén ảnh JPEG).\n\n### 2. Eigenvalues trong PCA\nTrong giảm chiều dữ liệu, các trị riêng (eigenvalues) của ma trận xoay có thể là số phức, biểu thị góc xoay của dữ liệu.\n\n### 3. Complex-valued Neural Networks (CVNNs)\nMạng nơ-ron số phức biểu diễn tốt hơn các dữ liệu có tính chất sóng (EEG, Radar, Wifi) và mô hình hóa tốt hơn tính đồng bộ (synchronization) nhờ phần pha (Argument).",
+                                "order": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Tổng kết & Bài tập",
+                "order": 5,
+                "lessons": [
+                    {
+                        "title": "Tổng kết và Bài tập tự luyện",
+                        "slug": "tong-ket-va-bai-tap",
+                        "type": "text",
+                        "order": 1,
+                        "duration": 900,
+                        "is_free": true,
+                        "content_blocks": [
+                            {
+                                "type": "text",
+                                "content": "### Tóm tắt\n* Đại số: i² = -1, cộng/trừ/nhân như đa thức.\n* Hình học: |z| là khoảng cách, arg(z) là góc.\n* Euler: e^(iφ) = cosφ + i.sinφ.\n\n### Bài tập về nhà\n1. Viết z = -1 + √3i dưới dạng lượng giác và mũ.\n2. Tìm tất cả căn bậc 3 của z = 8.\n3. Chứng minh: Nếu hệ số đa thức thực thì nghiệm phức luôn đi theo cặp liên hợp.",
+                                "order": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
