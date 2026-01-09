@@ -33,7 +33,8 @@ interface Course {
 
 async function getCourse(slug: string): Promise<Course | null> {
     try {
-        const res = await fetch(`http://localhost:4000/api/v1/courses/${slug}`, {
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
+        const res = await fetch(`${API_URL}/courses/${slug}`, {
             cache: 'no-store',
         });
 
