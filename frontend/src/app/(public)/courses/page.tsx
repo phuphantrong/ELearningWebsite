@@ -10,26 +10,26 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
         <div className="min-h-screen bg-slate-50 py-10">
             <div className="container-custom">
                 {/* Header Section */}
-                <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+                <div className="flex flex-col gap-4 mb-8 md:mb-10">
                     <div>
-                        <h1 className="text-3xl font-bold text-slate-900">Explore Courses</h1>
-                        <p className="text-slate-500 mt-2">Discover new skills and advance your career.</p>
+                        <h1 className="text-2xl md:text-3xl font-bold text-slate-900">Explore Courses</h1>
+                        <p className="text-slate-500 mt-2 text-sm md:text-base">Discover new skills and advance your career.</p>
                     </div>
 
-                    {/* Search & Filter */}
-                    <div className="flex w-full md:w-auto gap-3">
-                        <form className="relative w-full md:w-80">
+                    {/* Search & Filter - Stack on Mobile */}
+                    <div className="flex flex-col sm:flex-row gap-3 w-full">
+                        <form className="relative flex-1">
                             <input
                                 name="q"
                                 defaultValue={q}
                                 placeholder="Search courses..."
-                                className="w-full pl-10 pr-4 py-2 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all shadow-sm"
+                                className="w-full pl-10 pr-4 py-3 md:py-2 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all shadow-sm text-base"
                             />
-                            <svg className="w-5 h-5 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-slate-400 absolute left-3 top-3 md:top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </form>
-                        <select className="px-4 py-2 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-slate-700 shadow-sm cursor-pointer">
+                        <select className="px-4 py-3 md:py-2 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-slate-700 shadow-sm cursor-pointer text-base sm:w-auto w-full">
                             <option>Newest</option>
                             <option>Price: Low to High</option>
                             <option>Price: High to Low</option>
@@ -51,7 +51,7 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                                 {/* Badges */}
                                 {course.level && (
                                     <div className={`absolute top-3 left-3 text-white text-xs font-bold px-2 py-1 rounded shadow-md ${course.level === 'Beginner' ? 'bg-green-500' :
-                                            course.level === 'Intermediate' ? 'bg-blue-500' : 'bg-purple-500'
+                                        course.level === 'Intermediate' ? 'bg-blue-500' : 'bg-purple-500'
                                         }`}>
                                         {course.level}
                                     </div>
@@ -59,12 +59,12 @@ export default async function CoursesPage({ searchParams }: { searchParams: Prom
                             </div>
 
                             {/* Card Content */}
-                            <div className="p-5 flex-1 flex flex-col">
-                                <h3 className="text-lg font-bold text-slate-900 line-clamp-2 leading-tight mb-2 group-hover:text-primary-600 transition-colors">
+                            <div className="p-4 md:p-5 flex-1 flex flex-col">
+                                <h3 className="text-base md:text-lg font-bold text-slate-900 line-clamp-2 leading-tight mb-2 group-hover:text-primary-600 transition-colors">
                                     {course.title}
                                 </h3>
 
-                                <div className="text-sm text-slate-500 mb-4 flex items-center gap-2">
+                                <div className="text-sm text-slate-500 mb-3 md:mb-4 flex items-center gap-2">
                                     <div className="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600 overflow-hidden">
                                         {/* Avatar placeholder if no image */}
                                         {course.author_name.charAt(0)}

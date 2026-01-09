@@ -14,6 +14,17 @@ pnpm dev
 bun dev
 ```
 
+Backend API:
+
+https://webelearning-backend.onrender.com/api/v1
+Frontend:
+
+https://webelearning-frontend.onrender.com
+Admin Panel:
+
+https://webelearning-frontend.onrender.com/admin
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

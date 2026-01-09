@@ -71,19 +71,19 @@ export default function ContentBlockRenderer({ block }: { block: any }) {
             const headingLevel = Math.min(Math.max(block.metadata?.level || 2, 1), 6);
             const HeadingTag = `h${headingLevel}` as React.ElementType;
             const headingClasses = {
-                1: 'text-4xl font-bold text-slate-900 mt-12 mb-6',
-                2: 'text-3xl font-bold text-slate-900 mt-10 mb-5',
-                3: 'text-2xl font-bold text-slate-800 mt-8 mb-4',
-                4: 'text-xl font-bold text-slate-800 mt-6 mb-3',
-                5: 'text-lg font-bold text-slate-700 mt-5 mb-2',
-                6: 'text-base font-bold text-slate-700 mt-4 mb-2',
-            }[headingLevel] || 'text-2xl font-bold text-slate-900 mt-8 mb-4';
+                1: 'text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mt-8 md:mt-12 mb-4 md:mb-6',
+                2: 'text-xl md:text-2xl lg:text-3xl font-bold text-slate-900 mt-6 md:mt-10 mb-3 md:mb-5',
+                3: 'text-lg md:text-xl lg:text-2xl font-bold text-slate-800 mt-5 md:mt-8 mb-3 md:mb-4',
+                4: 'text-base md:text-lg lg:text-xl font-bold text-slate-800 mt-4 md:mt-6 mb-2 md:mb-3',
+                5: 'text-sm md:text-base lg:text-lg font-bold text-slate-700 mt-3 md:mt-5 mb-2',
+                6: 'text-sm md:text-base font-bold text-slate-700 mt-3 md:mt-4 mb-2',
+            }[headingLevel] || 'text-lg md:text-xl lg:text-2xl font-bold text-slate-900 mt-5 md:mt-8 mb-3 md:mb-4';
 
             return <HeadingTag className={headingClasses}>{block.content}</HeadingTag>;
 
         case 'TEXT':
             return (
-                <div className="prose prose-slate max-w-none mb-8">
+                <div className="prose prose-slate prose-sm md:prose-base max-w-none mb-6 md:mb-8 leading-relaxed">
                     <div dangerouslySetInnerHTML={{ __html: parseMarkdown(block.content) }} />
                 </div>
             );
@@ -91,23 +91,27 @@ export default function ContentBlockRenderer({ block }: { block: any }) {
         case 'CODE':
             const language = block.metadata?.language || 'javascript';
             return (
-                <div className="relative mb-8 rounded-xl overflow-hidden shadow-lg bg-[#1e1e1e] border border-slate-700">
-                    <div className="flex items-center justify-between px-4 py-2 bg-[#252526] border-b border-slate-700">
+                <div className="relative mb-6 md:mb-8 rounded-lg md:rounded-xl overflow-hidden shadow-lg bg-[#1e1e1e] border border-slate-700 code-block-responsive">
+                    <div className="flex items-center justify-between px-3 md:px-4 py-2 bg-[#252526] border-b border-slate-700">
                         <div className="flex gap-1.5">
-                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
+                            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
                         </div>
                         <span className="text-xs text-slate-400 font-mono">{language}</span>
                     </div>
                     <CopyButton text={block.content} />
-                    <SyntaxHighlighter
-                        language={language}
-                        style={vscDarkPlus}
-                        customStyle={{ margin: 0, padding: '1.5rem', fontSize: '0.875rem', lineHeight: '1.6' }}
-                    >
-                        {block.content}
-                    </SyntaxHighlighter>
+                    <div className="overflow-x-auto">
+                        <SyntaxHighlighter
+                            language={language}
+                            style={vscDarkPlus}
+                            customStyle={{ margin: 0, padding: '1rem', fontSize: '0.75rem', lineHeight: '1.5' }}
+                            wrapLines={false}
+                            wrapLongLines={false}
+                        >
+                            {block.content}
+                        </SyntaxHighlighter>
+                    </div>
                 </div>
             );
 
@@ -168,16 +172,16 @@ export default function ContentBlockRenderer({ block }: { block: any }) {
 
         case 'IMAGE':
             return (
-                <div className="mb-8 flex flex-col items-center">
+                <div className="mb-6 md:mb-8 flex flex-col items-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src={block.content}
                         alt={block.metadata?.alt || 'Content'}
-                        className="rounded-xl shadow-lg border border-slate-200 max-h-[500px] object-contain"
+                        className="rounded-lg md:rounded-xl shadow-lg border border-slate-200 w-full max-h-[300px] md:max-h-[400px] lg:max-h-[500px] object-contain"
                         loading="lazy"
                     />
                     {block.metadata?.caption && (
-                        <p className="text-sm text-slate-500 mt-3 italic text-center">{block.metadata.caption}</p>
+                        <p className="text-xs md:text-sm text-slate-500 mt-2 md:mt-3 italic text-center px-2">{block.metadata.caption}</p>
                     )}
                 </div>
             );
@@ -185,14 +189,16 @@ export default function ContentBlockRenderer({ block }: { block: any }) {
         case 'VIDEO':
             const embedUrl = getVideoEmbedUrl(block.content);
             return (
-                <div className="mb-8 aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
-                    <iframe
-                        src={embedUrl}
-                        className="w-full h-full"
-                        allowFullScreen
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        frameBorder="0"
-                    />
+                <div className="mb-6 md:mb-8 w-full">
+                    <div className="aspect-video rounded-lg md:rounded-xl overflow-hidden shadow-lg bg-black">
+                        <iframe
+                            src={embedUrl}
+                            className="w-full h-full"
+                            allowFullScreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            frameBorder="0"
+                        />
+                    </div>
                 </div>
             )
 
